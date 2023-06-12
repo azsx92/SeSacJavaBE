@@ -1,3 +1,8 @@
+import StringMethod.StringChp01;
+import StringMethod.StringChp02;
+import array.ArrayTest;
+import array.ArrayTest2;
+import array.SecondArrayTest3;
 import mypack.Test;
 import mypack.sesac.Test02;
 
@@ -100,7 +105,7 @@ public class Main  {
                 System.out.println(i);
             }
 */
-
+/*
             System.out.println("3단씩 조언을 구하기");
             System.out.println("*******************************");
             for (int i = 1; i < 10; i=i+3) {
@@ -113,5 +118,21 @@ public class Main  {
                 }
             System.out.println("*******************************");
             }
+
+
+
+            for (int i = 2; i < 10; i++) {
+                for (int j = 1; j < 10; j++) {
+                    System.out.print(i +" * " + j +" = "+ i*j+"\t");
+                }
+                System.out.println();
+            }*/
+
+//            ArrayTest a = new ArrayTest();
+//            ArrayTest2 b = new ArrayTest2();
+            SecondArrayTest3 c = new SecondArrayTest3();
+//            StringChp01 s = new StringChp01();
+//            StringChp02 s2 = new StringChp02();
+
         }
 }
