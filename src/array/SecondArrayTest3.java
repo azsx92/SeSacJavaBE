@@ -4,7 +4,7 @@ public class SecondArrayTest3 {
     public SecondArrayTest3() {
         //   1~5 ,6~20
 
-/*        void printNumArr3(){
+//       void printNumArr3(){
 //        20230612 sesac 수업 2차원배열 예제
             int[][] numsArr = new int[2][];
             int[] nums1 = new int[5];
@@ -27,7 +27,7 @@ public class SecondArrayTest3 {
                 }
                 System.out.println();
             }
-        }*/
+//        }
 
 /*
         int[][] c = new int[2][];
@@ -43,19 +43,6 @@ public class SecondArrayTest3 {
             System.out.println();
         }
         */
-        // 분석 공부하기
-        int[][] a = new int[2][];
-        a[0] = new int[5];
-        a[1] = new int[15];
-
-        int k=1;
-        for (int i[]: a ) {
-            for (int j:i) {
-                i[j] = k++;
-                System.out.print(i[j]+" ");
-            }
-            System.out.println();
-        }
 
 
     }

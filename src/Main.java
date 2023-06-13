@@ -1,8 +1,11 @@
+import ClassChp01.AA;
 import StringMethod.StringChp01;
 import StringMethod.StringChp02;
 import array.ArrayTest;
 import array.ArrayTest2;
 import array.SecondArrayTest3;
+import array.SecondArrayTest4;
+import exam01.A;
 import mypack.Test;
 import mypack.sesac.Test02;
 
@@ -105,7 +108,7 @@ public class Main  {
                 System.out.println(i);
             }
 */
-/*
+
             System.out.println("3단씩 조언을 구하기");
             System.out.println("*******************************");
             for (int i = 1; i < 10; i=i+3) {
@@ -114,11 +117,17 @@ public class Main  {
 //                        System.out.println("i = " + i + " j = " + j + " k = " + k);
                         System.out.print(k+"*"+j+ "="+j*k+ "\t");
                     }
-                System.out.println();
+                    System.out.println();
                 }
             System.out.println("*******************************");
             }
 
+            // 1*1=1   2*1=2  3*1=3
+            // 1*2=2   2*2=4  3*2=6
+            // 1*3=3   2*3=6  3*3=9
+            // 1*9=9   2*9=18 3*9=27
+            // *****************************
+            // 4*1=4   5*1=5  6*1=6
 
 
             for (int i = 2; i < 10; i++) {
@@ -126,13 +135,14 @@ public class Main  {
                     System.out.print(i +" * " + j +" = "+ i*j+"\t");
                 }
                 System.out.println();
-            }*/
+            }
 
 //            ArrayTest a = new ArrayTest();
 //            ArrayTest2 b = new ArrayTest2();
-            SecondArrayTest3 c = new SecondArrayTest3();
+//            SecondArrayTest3 c = new SecondArrayTest3();
+            SecondArrayTest4 c2 = new SecondArrayTest4();
 //            StringChp01 s = new StringChp01();
 //            StringChp02 s2 = new StringChp02();
-
+//            AA a = new AA();
         }
 }
