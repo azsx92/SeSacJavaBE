@@ -1,4 +1,6 @@
 import ClassChp01.AA;
+import ClassChp02.ClassCh2;
+import ClassChp02.ClassCh3;
 import StringMethod.StringChp01;
 import StringMethod.StringChp02;
 import array.ArrayTest;
@@ -108,6 +110,7 @@ public class Main  {
                 System.out.println(i);
             }
 */
+/*
 
             System.out.println("3단씩 조언을 구하기");
             System.out.println("*******************************");
@@ -136,13 +139,27 @@ public class Main  {
                 }
                 System.out.println();
             }
+*/
 
 //            ArrayTest a = new ArrayTest();
 //            ArrayTest2 b = new ArrayTest2();
 //            SecondArrayTest3 c = new SecondArrayTest3();
-            SecondArrayTest4 c2 = new SecondArrayTest4();
+//            SecondArrayTest4 c2 = new SecondArrayTest4();
 //            StringChp01 s = new StringChp01();
 //            StringChp02 s2 = new StringChp02();
 //            AA a = new AA();
+
+            //#1 A 타입 선언 A 객체 생성
+            ClassCh2 aa = new ClassCh2();
+            aa.print(); //A class
+            //#2 B 타입 선언 B 객체 생성
+            ClassCh3 bb = new ClassCh3();
+            bb.print(); //B클래스
+
+            //#3 A 타입 선언 B 객체 생성(다형성 표현)
+            ClassCh2 ab = new ClassCh3();
+            ab.print(); //B클래스
+
+
         }
 }
