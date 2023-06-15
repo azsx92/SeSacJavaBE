@@ -152,14 +152,22 @@ public class Main  {
             //#1 A 타입 선언 A 객체 생성
             ClassCh2 aa = new ClassCh2();
             aa.print(); //A class
+            aa.print2(); //A class print2
             //#2 B 타입 선언 B 객체 생성
             ClassCh3 bb = new ClassCh3();
             bb.print(); //B클래스
-
+            bb.print2(); // A 클래스 print2
+            bb.print2(3);  //B 클래스 print2
             //#3 A 타입 선언 B 객체 생성(다형성 표현)
             ClassCh2 ab = new ClassCh3();
             ab.print(); //B클래스
+            ab.print2(); //B클래스
+//            ab.print2(3); //오류
 
+            // 메서드 오버라이딩
+//            ClassCh2 , ClassCh3 print
+            //메서드 오버로딩
+//            ClassCh2 , ClassCh3 print2
 
         }
 }

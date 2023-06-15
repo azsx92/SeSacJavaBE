@@ -11,6 +11,9 @@ public class ClassCh2 {
     * */
 
     public void print() {
-        System.out.println("A 클래스");
+        System.out.println("A 클래스 print1");
+    }
+    public void print2() {
+        System.out.println("A 클래스 print2");
     }
 }

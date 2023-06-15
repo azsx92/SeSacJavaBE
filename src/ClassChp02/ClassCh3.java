@@ -10,7 +10,20 @@ public class ClassCh3 extends ClassCh2{
     * - 시스템을 모델로 표현해주는 대표적인 모델링 언어
     * */
 
+    interface C {
+        public abstract void bcd();
+    }
+    C c = new C() {
+        @Override
+        public void bcd() {
+
+        }
+    };
     public void print() {
-        System.out.println("B 클래스");
+        super.print();
+        System.out.println("B 클래스 print1");
+    }
+    public void print2(int a) {
+        System.out.println("B 클래스 print2");
     }
 }
