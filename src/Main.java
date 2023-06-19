@@ -10,6 +10,7 @@ import array.SecondArrayTest4;
 import exam01.A;
 import mypack.Test;
 import mypack.sesac.Test02;
+import thread.Thread01;
 
 public class Main  {
         public static void main ( String[] args) {
@@ -148,7 +149,7 @@ public class Main  {
 //            StringChp01 s = new StringChp01();
 //            StringChp02 s2 = new StringChp02();
 //            AA a = new AA();
-
+/*
             //#1 A 타입 선언 A 객체 생성
             ClassCh2 aa = new ClassCh2();
             aa.print(); //A class
@@ -161,13 +162,16 @@ public class Main  {
             //#3 A 타입 선언 B 객체 생성(다형성 표현)
             ClassCh2 ab = new ClassCh3();
             ab.print(); //B클래스
-            ab.print2(); //B클래스
+            ab.print2(); //B클래스*/
 //            ab.print2(3); //오류
 
             // 메서드 오버라이딩
 //            ClassCh2 , ClassCh3 print
             //메서드 오버로딩
 //            ClassCh2 , ClassCh3 print2
+
+//            2023.06.19 월
+            Thread01 thread01 = new Thread01();
 
         }
 }
