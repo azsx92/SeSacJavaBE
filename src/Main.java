@@ -10,6 +10,7 @@ import array.SecondArrayTest4;
 import exam01.A;
 import mypack.Test;
 import mypack.sesac.Test02;
+import thread.MyThread;
 import thread.Thread01;
 
 public class Main  {
@@ -172,6 +173,7 @@ public class Main  {
 
 //            2023.06.19 월
             Thread01 thread01 = new Thread01();
-
+            MyThread myThread = new MyThread();
+            myThread.run();
         }
 }
