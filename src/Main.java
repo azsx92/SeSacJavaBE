@@ -11,6 +11,7 @@ import exam01.A;
 import mypack.Test;
 import mypack.sesac.Test02;
 import thread.MyThread;
+import thread.SMIFileThread;
 import thread.Thread01;
 
 public class Main  {
@@ -172,8 +173,20 @@ public class Main  {
 //            ClassCh2 , ClassCh3 print2
 
 //            2023.06.19 월
-            Thread01 thread01 = new Thread01();
-            MyThread myThread = new MyThread();
-            myThread.run();
+//            Thread01 thread01 = new Thread01();
+//            MyThread myThread = new MyThread();
+//            myThread.run();
+            //SMIFileThread 생성 및 실행
+            Thread smiFileThread = new SMIFileThread();
+            smiFileThread.start();
+
+            //(비디오프레임번호) 1~5 저장 + 출력
+            int[] intArray = new int[]{1,2,3,4,5};
+
+            for (int i = 0; i < intArray.length; i++) {
+                System.out.print("(비디오 프레임)" + intArray[i]);
+                try{Thread.sleep(200); } catch (InterruptedException e ){};
+
+            }
         }
 }
