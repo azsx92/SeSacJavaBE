@@ -14,6 +14,7 @@ import exam01.A;
 import mypack.Test;
 import mypack.sesac.Test02;
 import synchronize.MyData;
+import synchronize.ThreadState;
 import thread.*;
 
 public class Main  {
@@ -262,7 +263,8 @@ public class Main  {
 //            thread2:5초
 //            thread1:5초
 //            DamonThread damonThread = new DamonThread();
-            MyData myData = new MyData();
-            myData.test();
+            /*MyData myData = new MyData();
+            myData.test();*/
+            ThreadState threadState = new ThreadState();
         }
 }
