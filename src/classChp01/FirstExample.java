@@ -1,4 +1,4 @@
-package ClassChp01;
+package classChp01;
 import java.sql.*;
 public class FirstExample {
 

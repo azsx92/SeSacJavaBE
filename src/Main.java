@@ -1,24 +1,7 @@
-import ClassChp01.AA;
-import ClassChp02.ClassCh2;
-import ClassChp02.ClassCh3;
-import StringMethod.StringChp01;
-import StringMethod.StringChp02;
-import Thread2.Attribute2;
-import Thread2.DamonThread;
-import Thread2.ThreadAttribute;
-import array.ArrayTest;
-import array.ArrayTest2;
-import array.SecondArrayTest3;
-import array.SecondArrayTest4;
-import exam01.A;
-import mypack.Test;
-import mypack.sesac.Test02;
-import synchronize.MyData;
-import synchronize.SleepAndInterruptExample;
-import synchronize.ThreadRunnable;
-import synchronize.ThreadState;
+import collection.ArrayListChap01;
+import collection.ListChap01;
+import collection.ListChap02;
 import thread.*;
-import threadBlocked.MyBlockTest;
 import threadWaiting.DataBox;
 
 public class Main {
@@ -288,7 +271,8 @@ public class Main {
 
 //            MyBlockTest myBlockTest = new MyBlockTest();
 //            myBlockTest.startAll();
-        DataBox dataBox = new DataBox();
+        // thread end
+       /* DataBox dataBox = new DataBox();
         Thread t1 = new Thread() { //쓰기 쓰레드
             @Override
             public void run() {
@@ -312,6 +296,10 @@ public class Main {
             }
         };
         t1.start();
-        t2.start();
+        t2.start();*/
+
+//        ListChap01 list = new ListChap01();
+//        ListChap02 list2 = new ListChap02();
+        ArrayListChap01 arr = new ArrayListChap01();
     }
 }

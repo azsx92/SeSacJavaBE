@@ -1,7 +1,5 @@
-package ClassChp01;
+package classChp01;
 
-
-import mypack.sesac.Test02;
 
 public class ClassChap01 {
     public ClassChap01() {

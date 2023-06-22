@@ -1,4 +1,4 @@
-package StringMethod;
+package stringMethod;
 
 public class StringChp01 {
     public StringChp01() {

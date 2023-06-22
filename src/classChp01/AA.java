@@ -1,4 +1,4 @@
-package ClassChp01;
+package classChp01;
 
 public class AA {
     int m =3;

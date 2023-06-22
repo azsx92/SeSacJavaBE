@@ -1,8 +1,6 @@
-package StringMethod;
+package stringMethod;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.Locale;
 
 public class StringChp02 {
     public StringChp02() {
