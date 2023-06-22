@@ -14,6 +14,7 @@ import exam01.A;
 import mypack.Test;
 import mypack.sesac.Test02;
 import synchronize.MyData;
+import synchronize.ThreadRunnable;
 import synchronize.ThreadState;
 import thread.*;
 
@@ -243,7 +244,7 @@ public class Main  {
             thread.start();
             thread2.start();
         */
-          // ThreadAttribute attribute = new ThreadAttribute();
+            // ThreadAttribute attribute = new ThreadAttribute();
 //           Attribute2 attribute2 = new Attribute2();
             //Damon
 //              데몬 쓰레드는 main쓰레드를 포함해서 모든 일반쓰레드가 종료해야 함께 종료됨
@@ -265,6 +266,8 @@ public class Main  {
 //            DamonThread damonThread = new DamonThread();
             /*MyData myData = new MyData();
             myData.test();*/
-            ThreadState threadState = new ThreadState();
+//            ThreadState threadState = new ThreadState();
+         ThreadRunnable threadRunnable = new ThreadRunnable();
+
         }
 }
