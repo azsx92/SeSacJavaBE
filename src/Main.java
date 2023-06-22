@@ -18,6 +18,7 @@ import synchronize.SleepAndInterruptExample;
 import synchronize.ThreadRunnable;
 import synchronize.ThreadState;
 import thread.*;
+import threadBlocked.MyBlockTest;
 
 public class Main  {
         public static void main ( String[] args) throws InterruptedException {
@@ -270,18 +271,21 @@ public class Main  {
 //            ThreadState threadState = new ThreadState();
 //         ThreadRunnable threadRunnable = new ThreadRunnable();
 //            SleepAndInterruptExample sleep = new SleepAndInterruptExample();
-                //#1. join(...) - interrupt() Test
-                MyThread1 myThread1 = new MyThread1();
-                MyThread2 myThread2 = new MyThread2(myThread1);
-                myThread1.start();
-                myThread2.start();
-                Thread.sleep(100); //시간지연
-                System.out.println("MyThread1 State : " + myThread1.getState()); //RUNNABLE
-                System.out.println("MyThread2 State : " + myThread2.getState()); //TIMED_WAITING
+//                //#1. join(...) - interrupt() Test
+//                MyThread1 myThread1 = new MyThread1();
+//                MyThread2 myThread2 = new MyThread2(myThread1);
+//                myThread1.start();
+//                myThread2.start();
+//                Thread.sleep(100); //시간지연
+//                System.out.println("MyThread1 State : " + myThread1.getState()); //RUNNABLE
+//                System.out.println("MyThread2 State : " + myThread2.getState()); //TIMED_WAITING
+//
+//                myThread2.interrupt();
+//                Thread.sleep(100);
+//                System.out.println("MyThread1 State : " + myThread1.getState());//RUNNABLE
+//                System.out.println("MyThread2 State : " + myThread2.getState());//RUNNABLE
 
-                myThread2.interrupt();
-                Thread.sleep(100);
-                System.out.println("MyThread1 State : " + myThread1.getState());//RUNNABLE
-                System.out.println("MyThread2 State : " + myThread2.getState());//RUNNABLE
+            MyBlockTest myBlockTest = new MyBlockTest();
+            myBlockTest.startAll();
         }
 }
