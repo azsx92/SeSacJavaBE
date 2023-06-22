@@ -300,6 +300,7 @@ public class Main {
 //        ListChap02 list2 = new ListChap02();
 //        ArrayListChap01 arr = new ArrayListChap01();
 //        VectorChap01 vectorChap01 = new VectorChap01();
-        LinkedListChap01 linkedList = new LinkedListChap01();
+//        LinkedListChap01 linkedList = new LinkedListChap01();
+        ArrayListVsLinkedList al = new ArrayListVsLinkedList();
     }
 }
