@@ -1,7 +1,4 @@
-import collection.ArrayListChap01;
-import collection.ListChap01;
-import collection.ListChap02;
-import collection.VectorChap01;
+import collection.*;
 import thread.*;
 import threadWaiting.DataBox;
 
@@ -302,6 +299,7 @@ public class Main {
 //        ListChap01 list = new ListChap01();
 //        ListChap02 list2 = new ListChap02();
 //        ArrayListChap01 arr = new ArrayListChap01();
-        VectorChap01 vectorChap01 = new VectorChap01();
+//        VectorChap01 vectorChap01 = new VectorChap01();
+        LinkedListChap01 linkedList = new LinkedListChap01();
     }
 }
