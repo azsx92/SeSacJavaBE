@@ -3,6 +3,7 @@ import ClassChp02.ClassCh2;
 import ClassChp02.ClassCh3;
 import StringMethod.StringChp01;
 import StringMethod.StringChp02;
+import Thread2.ThreadAttribute;
 import array.ArrayTest;
 import array.ArrayTest2;
 import array.SecondArrayTest3;
@@ -202,7 +203,7 @@ public class Main  {
 
             }*/
             // Thread 생성 익명이너클래스
-            Thread thread = new Thread(new Runnable() {
+          /*  Thread thread = new Thread(new Runnable() {
                 @Override
                 public void run() {
                     String[] strArray = new String[] {"하나","둘","셋","넷","다섯"};
@@ -237,5 +238,9 @@ public class Main  {
             // Thread 생성
             thread.start();
             thread2.start();
+        */
+           ThreadAttribute attribute = new ThreadAttribute();
+
+
         }
 }
