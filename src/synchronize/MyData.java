@@ -2,8 +2,11 @@ package synchronize;
 
 public class MyData {
     int data =3;
-
-    public void plusData(){
+// ☞ 동기화(synchronized) 방법
+//
+//    방법#1 - 메서드 동기화 (synchronized method) <- 동시에 두 개의 Thread가 동기화 메서드 사용불가
+//    방법#2 - 블록 동기화 (synchronized block) <- 동시에 두 개의 Thread가 동기화 블록 사용불가
+    public synchronized void plusData(){
         // 데이터를 바로 가져와 2초 뒤 결과값 저장
         int mydata = data;
         try {
