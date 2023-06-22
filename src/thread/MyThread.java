@@ -29,14 +29,12 @@ public class MyThread extends Thread {
 //     또는   MyThread myThread = new MyThread();
 //        myThread.start();
 
-        while (true) {
-            if (yieldFlag) {
-                Thread.yield();
-            } else {
-                System.out.println(getName() + " 실행");
-                for (long i = 0; i < 1000000000L; i++) {
-                }
-            }
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            System.out.println(" --sleep() 중 interrupt 발생--");
+            for (long i = 0; i < 100000000L; i++) {
+            } //시간지연
         }
     }
 }

@@ -14,12 +14,13 @@ import exam01.A;
 import mypack.Test;
 import mypack.sesac.Test02;
 import synchronize.MyData;
+import synchronize.SleepAndInterruptExample;
 import synchronize.ThreadRunnable;
 import synchronize.ThreadState;
 import thread.*;
 
 public class Main  {
-        public static void main ( String[] args) {
+        public static void main ( String[] args) throws InterruptedException {
 //            연산자 산술 연산자 (+ , - , *, /, %)
 /*
             System.out.println(2+3); //5
@@ -267,7 +268,20 @@ public class Main  {
             /*MyData myData = new MyData();
             myData.test();*/
 //            ThreadState threadState = new ThreadState();
-         ThreadRunnable threadRunnable = new ThreadRunnable();
+//         ThreadRunnable threadRunnable = new ThreadRunnable();
+//            SleepAndInterruptExample sleep = new SleepAndInterruptExample();
+                //#1. join(...) - interrupt() Test
+                MyThread1 myThread1 = new MyThread1();
+                MyThread2 myThread2 = new MyThread2(myThread1);
+                myThread1.start();
+                myThread2.start();
+                Thread.sleep(100); //시간지연
+                System.out.println("MyThread1 State : " + myThread1.getState()); //RUNNABLE
+                System.out.println("MyThread2 State : " + myThread2.getState()); //TIMED_WAITING
 
+                myThread2.interrupt();
+                Thread.sleep(100);
+                System.out.println("MyThread1 State : " + myThread1.getState());//RUNNABLE
+                System.out.println("MyThread2 State : " + myThread2.getState());//RUNNABLE
         }
 }
