@@ -10,10 +10,7 @@ import array.SecondArrayTest4;
 import exam01.A;
 import mypack.Test;
 import mypack.sesac.Test02;
-import thread.MyThread;
-import thread.SMIFileThread;
-import thread.Thread01;
-import thread.VideoFileThread;
+import thread.*;
 
 public class Main  {
         public static void main ( String[] args) {
@@ -178,18 +175,31 @@ public class Main  {
 //            MyThread myThread = new MyThread();
 //            myThread.run();
             //SMIFileThread 생성 및 실행
-            Thread videoFileThread = new VideoFileThread();
-            Thread smiFileThread = new SMIFileThread();
-            videoFileThread.start();
-            smiFileThread.start();
+//            Thread videoFileThread = new VideoFileThread();
+//            Thread smiFileThread = new SMIFileThread();
 //
-//            //(비디오프레임번호) 1~5 저장 + 출력
-//            int[] intArray = new int[]{1,2,3,4,5};
+//            videoFileThread.start();
+//            smiFileThread.start();
 //
-//            for (int i = 0; i < intArray.length; i++) {
-//                System.out.print("(비디오 프레임)" + intArray[i]+"-");
-//                try{Thread.sleep(200); } catch (InterruptedException e ){};
-//
-//            }
+
+            //Runnable 생성  및 실행
+            Runnable smiFileRunnable = new SMIFileThread();
+            Runnable vidoeFileRunnable = new VideoFileRunnable();
+            //smiFileRunnable.start(); // 오류 인터페이스 안에 start가 존재하지 않다.
+            // Thread 생성
+            Thread thread = new Thread(smiFileRunnable);
+            Thread thread2 = new Thread(vidoeFileRunnable);
+            // Thread 생성
+            thread.start();
+            thread2.start();
+
+          /*  //(비디오프레임번호) 1~5 저장 + 출력
+            int[] intArray = new int[]{1,2,3,4,5};
+
+            for (int i = 0; i < intArray.length; i++) {
+                System.out.print("(비디오 프레임)" + intArray[i]+"-");
+                try{Thread.sleep(200); } catch (InterruptedException e ){};
+
+            }*/
         }
 }
