@@ -4,6 +4,7 @@ import ClassChp02.ClassCh3;
 import StringMethod.StringChp01;
 import StringMethod.StringChp02;
 import Thread2.Attribute2;
+import Thread2.DamonThread;
 import Thread2.ThreadAttribute;
 import array.ArrayTest;
 import array.ArrayTest2;
@@ -241,8 +242,25 @@ public class Main  {
             thread2.start();
         */
           // ThreadAttribute attribute = new ThreadAttribute();
-           Attribute2 attribute2 = new Attribute2();
-
+//           Attribute2 attribute2 = new Attribute2();
+            //Damon
+//              데몬 쓰레드는 main쓰레드를 포함해서 모든 일반쓰레드가 종료해야 함께 종료됨
+//            thread1:일반쓰레드
+//            thread2:데몬쓰레드
+//            thread1:0초
+//            thread2:0초
+//            thread1:1초
+//            thread2:1초
+//            thread2:2초
+//            thread1:2초
+//            main thread 종료
+//            thread1:3초
+//            thread2:3초
+//            thread1:4초
+//            thread2:4초
+//            thread2:5초
+//            thread1:5초
+            DamonThread damonThread = new DamonThread();
 
         }
 }
