@@ -3,6 +3,7 @@ import ClassChp02.ClassCh2;
 import ClassChp02.ClassCh3;
 import StringMethod.StringChp01;
 import StringMethod.StringChp02;
+import Thread2.Attribute2;
 import Thread2.ThreadAttribute;
 import array.ArrayTest;
 import array.ArrayTest2;
@@ -239,7 +240,8 @@ public class Main  {
             thread.start();
             thread2.start();
         */
-           ThreadAttribute attribute = new ThreadAttribute();
+          // ThreadAttribute attribute = new ThreadAttribute();
+           Attribute2 attribute2 = new Attribute2();
 
 
         }
