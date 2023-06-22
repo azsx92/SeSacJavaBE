@@ -19,9 +19,10 @@ import synchronize.ThreadRunnable;
 import synchronize.ThreadState;
 import thread.*;
 import threadBlocked.MyBlockTest;
+import threadWaiting.DataBox;
 
-public class Main  {
-        public static void main ( String[] args) throws InterruptedException {
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
 //            연산자 산술 연산자 (+ , - , *, /, %)
 /*
             System.out.println(2+3); //5
@@ -173,16 +174,16 @@ public class Main  {
             ab.print2(); //B클래스*/
 //            ab.print2(3); //오류
 
-            // 메서드 오버라이딩
+        // 메서드 오버라이딩
 //            ClassCh2 , ClassCh3 print
-            //메서드 오버로딩
+        //메서드 오버로딩
 //            ClassCh2 , ClassCh3 print2
 
 //            2023.06.19 월
 //            Thread01 thread01 = new Thread01();
 //            MyThread myThread = new MyThread();
 //            myThread.run();
-            //SMIFileThread 생성 및 실행
+        //SMIFileThread 생성 및 실행
 //            Thread videoFileThread = new VideoFileThread();
 //            Thread smiFileThread = new SMIFileThread();
 //
@@ -190,14 +191,14 @@ public class Main  {
 //            smiFileThread.start();
 //
 
-            //Runnable 생성  및 실행
-            Runnable smiFileRunnable = new SMIFileThread();
-            Runnable vidoeFileRunnable = new VideoFileRunnable();
-            //smiFileRunnable.start(); // 오류 인터페이스 안에 start가 존재하지 않다.
-            // Thread 생성
+        //Runnable 생성  및 실행
+        Runnable smiFileRunnable = new SMIFileThread();
+        Runnable vidoeFileRunnable = new VideoFileRunnable();
+        //smiFileRunnable.start(); // 오류 인터페이스 안에 start가 존재하지 않다.
+        // Thread 생성
 //            Thread thread = new Thread(smiFileRunnable);
 //            Thread thread2 = new Thread(vidoeFileRunnable);
-            // Thread 생성
+        // Thread 생성
 //            thread.start();
 //            thread2.start();
 
@@ -209,7 +210,7 @@ public class Main  {
                 try{Thread.sleep(200); } catch (InterruptedException e ){};
 
             }*/
-            // Thread 생성 익명이너클래스
+        // Thread 생성 익명이너클래스
           /*  Thread thread = new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -246,9 +247,9 @@ public class Main  {
             thread.start();
             thread2.start();
         */
-            // ThreadAttribute attribute = new ThreadAttribute();
+        // ThreadAttribute attribute = new ThreadAttribute();
 //           Attribute2 attribute2 = new Attribute2();
-            //Damon
+        //Damon
 //              데몬 쓰레드는 main쓰레드를 포함해서 모든 일반쓰레드가 종료해야 함께 종료됨
 //            thread1:일반쓰레드
 //            thread2:데몬쓰레드
@@ -285,7 +286,32 @@ public class Main  {
 //                System.out.println("MyThread1 State : " + myThread1.getState());//RUNNABLE
 //                System.out.println("MyThread2 State : " + myThread2.getState());//RUNNABLE
 
-            MyBlockTest myBlockTest = new MyBlockTest();
-            myBlockTest.startAll();
-        }
+//            MyBlockTest myBlockTest = new MyBlockTest();
+//            myBlockTest.startAll();
+        DataBox dataBox = new DataBox();
+        Thread t1 = new Thread() { //쓰기 쓰레드
+            @Override
+            public void run() {
+                for (int i = 0; i < 10; i++) {
+                    try {
+                        dataBox.inputData(i);
+                    } catch (InterruptedException e) {
+                    }
+                }
+            }
+        };
+        Thread t2 = new Thread() { //읽기 쓰레드
+            @Override
+            public void run() {
+                for (int i = 0; i < 10; i++) {
+                    try {
+                        dataBox.outputData();
+                    } catch (InterruptedException e) {
+                    }
+                }
+            }
+        };
+        t1.start();
+        t2.start();
+    }
 }
