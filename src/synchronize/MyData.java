@@ -6,13 +6,15 @@ public class MyData {
 //
 //    방법#1 - 메서드 동기화 (synchronized method) <- 동시에 두 개의 Thread가 동기화 메서드 사용불가
 //    방법#2 - 블록 동기화 (synchronized block) <- 동시에 두 개의 Thread가 동기화 블록 사용불가
-    public synchronized void plusData(){
-        // 데이터를 바로 가져와 2초 뒤 결과값 저장
-        int mydata = data;
-        try {
-            Thread.sleep(2000);
-        } catch(InterruptedException e) {   }
-            data = mydata+1;
+    public  void plusData(){
+        synchronized (this) { // Key를 가진 객체 (모든 객체는 저마다의 Key 하나를 가지고 있음) 일반적으로 클래스 내부에서 바로 사용할 수 있는 객체인 this를 사용
+            // 데이터를 바로 가져와 2초 뒤 결과값 저장
+            int mydata = data;
+            try {
+                Thread.sleep(2000);
+            } catch(InterruptedException e) {   }
+                data = mydata+1;
+        }
     }
 
     public void test () {
